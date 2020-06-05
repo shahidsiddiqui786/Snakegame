@@ -2,7 +2,13 @@
 
  export function randomGridPosition() {
  	return {
- 		x: Math.floor(Math.random() * grid_Size) +1;
- 		y: Math.floor(Math.random() * grid_Size) +1;
- 	}
+ 		x: Math.floor(Math.random() * grid_Size) +1,
+ 		y: Math.floor(Math.random() * grid_Size) +1
+ 	};
+ }
+
+ export function outsideGrid(position) {
+ 	return (position.x < 1 || position.x > grid_Size ||
+ 		 	    position.y < 1 || position.y > grid_Size );
+ 	
  }
