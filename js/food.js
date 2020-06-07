@@ -1,11 +1,13 @@
  import { onSnake, expandSnake  } from './snake.js'
  import { randomGridPosition } from './grid.js'
+ import { playAudioFood } from './audio.js'
 
  let food = getRandomFoodPosition();
- const Expansion_Rate = 5;
+ const Expansion_Rate = 1;
 
  export function update() {
  	if (onSnake(food)) {
+ 		playAudioFood();
  		expandSnake(Expansion_Rate);
  		food = getRandomFoodPosition();
  		}
@@ -19,7 +21,6 @@ export function draw(gameBoard) {
  		foodElement.style.gridColumnStart = food.x;
  		foodElement.classList.add('target');
  		gameBoard.appendChild(foodElement);
- 	
  }
 
  function getRandomFoodPosition() {

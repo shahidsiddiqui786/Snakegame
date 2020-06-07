@@ -1,4 +1,5 @@
  import { getInputDirection } from './input.js'
+ import { grid_Size } from './grid.js'
 
  export const snake_speed = 5;
 const snakeBody =[{x: 11, y: 11}];
@@ -30,6 +31,10 @@ let newSegment = 0;
  		snakeElement.style.gridRowStart = segment.y;
  		snakeElement.style.gridColumnStart = segment.x;
  		snakeElement.classList.add('snake');
+ 		let head = getSnakeHead();
+ 		// if(head.x < 1 || head.y < 1 || head.x>grid_Size || head.y>grid_Size){
+ 		// 	snakeElement.classList.add('snake-utility');
+ 		// }
  		gameBoard.appendChild(snakeElement);
  	})
  }
@@ -51,6 +56,10 @@ let newSegment = 0;
   	 	if( ignoreHead && index === 0) return false;
   	 	return equalPosition(segment, position);
   	 })
+  }
+
+  export function getSnakeBodyLength(){
+    return snakeBody.length ;
   }
 
   function equalPosition(pos1,pos2){
