@@ -9,12 +9,10 @@
     "lite": "lite-server"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://jogesh_k_muppala@bitbucket.org/jogesh_k_muppala/git-test.git"
+    "type": "git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jogesh_k_muppala/git-test#readme",
   "devDependencies": {
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
