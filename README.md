@@ -6,3 +6,9 @@ you need to move your snake by four btn up-down-right-left and eat the food
 to grow your size and also too earn point.Take care of board walls/your other parts of body,if u collide
 you will lose at that instant.**
 
+### Here are some screenshots
+
+<img src='https://github.com/shahidsiddiqui786/Snakegame/blob/master/anbc.png' width='700"'>
+
+
+<img src='https://github.com/shahidsiddiqui786/Snakegame/blob/master/abnd.png' width='700"'>
