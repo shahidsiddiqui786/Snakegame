@@ -9,33 +9,30 @@
 	<script type="module" src="js/game.js"></script>
 </head>
 <body>
-	<audio id="foodCollapse">
+	  <audio id="foodCollapse">
      <source src="audio/corona.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+    
     <audio id="wallCollapse">
      <source src="audio/corona.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
-   <div id="gameBoard">
-   </div>
-   <div class="score-display">SCORE : <span id="score">0</span></div>
-  <div id="logo">
-   <div class="thumbnail" id="image3d">
-        <a href="#" id="front">
-          <img src="img/snake.jpg" alt="snake">
-          <div class="caption">
-            <h1>SNAKE GAME</h1>
-          </div>
-        </a>
-        <a href="#" id="back" >
-          <img src="img/snake2.png" alt="snake">
-          <div class="caption">
-            <h1 >SNAKE GAME</h1>
-          </div>
-        </a>
-      </div>
+   <div class="wrapper">
+     <div class="scorebar">
+       <div id="score-display">
+         <img class="log" src="img/apple_00.png" />
+          <span class="score" id="score">0</span>
+        </div>
+        <div id="score-display">
+          <img class="log" src="img/trophy_00.png" />
+           <span class="score" id="maxscore">0</span>
+         </div>
+     </div>
+     <div id="gameBoard"> 
+       <div class="target"></div>
+     </div>
    </div>
 </body>
 </html>

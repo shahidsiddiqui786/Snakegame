@@ -5,102 +5,64 @@ body{
      justify-content:center;
      align-items: center;
      margin: 0;
-    background: rgb(35,119,13);
-background: linear-gradient(90deg, rgba(35,119,13,0.6362744927072391) 20%, rgba(147,10,125,0.6194677700181634) 46%, rgba(255,0,86,0.706302503911721) 88%);
-    }
-    #gameBoard{
-      background-color: #ccc;
-      backface-visibility: hidden;
-      width: 95vmin;
-      height: 95vmin;
-      display: grid;
-      border: 1.2vmin solid blue;
-      border-radius: 10%;
-      grid-template-rows: repeat(20,1fr); 
-      grid-template-columns: repeat(20,1fr);
-    }
-    .snake{
-      background-color: hsl(200,100%,50%);
-      border: .25vmin solid black;
-      border-radius: 40%;
-    }
-    .snake-utility{
-      border-radius: 70%;
-    }
-    .target{
-      background-color: hsl(50,100%,50%);
-      border: .25vmin solid black;
-    }
- /* score */
-  .score-display{
-    position: absolute;
-    top: 5vmin;
-    right: 25vmin;
-    border-radius: 50%;
-    background-color: blue;
-    padding: 2vmin 4vmin;
-    box-shadow: 1vmin rgb(0,1,1);
-    opacity: 0.9;
-  }
-/* logo design  */
-  #logo {
-        position:absolute; 
-        top: 10vmin; 
-        left: 10vmin;
-        font-size: 2vmin;
-        -webkit-perspective: 150vmin;
-        perspective: 150vmin; 
-    }
-    #image3d {
-       display: block; 
-       position: relative;  
-       margin: 3vmin auto;
-       height: 20vmin;  width: 20vmin;
-      -webkit-transform-style: preserve-3d;
-      -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
-      transform-style: preserve-3d;
-      transform: rotateX(0) rotateY(0) rotateZ(0);
+     background-color: rgb(146, 34, 112);
+}
+     
+.wrapper{
+   background-color: rgba(248, 248, 19, 0.705);
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+   padding: 1em;
+}
 
-    }
-    #front {
-      position: absolute;  height: 20vmin;  width: 20vmin;
-      -webkit-backface-visibility: visible;
-      -webkit-transform:  translateZ(100px);
-      backface-visibility: visible;
-      transform:  translateZ(100px);
-    }
-    #back {
-      position: absolute;  height: 20vmin;  width: 20vmin;
-      -webkit-backface-visibility: visible;
-      -webkit-transform:  rotateY(180deg) translateZ(100px);
-      backface-visibility: visible;
-      transform: rotateY(180deg) translateZ(100px);
-    }
-    #image3d {
-      -webkit-animation: change 5s infinite linear;
-      animation: change 5s infinite linear;
+.scorebar {
+  background-color: rgb(18, 160, 5);
+  height: 10vh;
+  display: flex;
+}
 
-    }
-    img{
-      width: 50%;
-    }
-    h1{
-      color: blue;
-      opacity: 0.6;
-    }
-    @-webkit-keyframes change {
-      0% { -webkit-transform: rotateY(0) ;}
-      100% { -webkit-transform: rotateY(360deg) ;}
-    }
-    @keyframes change {
-      0% { transform: rotateY(0) ;}
-      100% { transform: rotateY(360deg) ;}
-    }
-    @media only screen and (max-width: 600px) {
-    #logo {
-         font-size: 1vmin;
-     }
-     img{
-      width: 36%;
-     }
-   }
+
+
+#gameBoard{
+  background-color: rgb(238, 240, 162);
+  width: 95vmin;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: repeat(20,1fr);
+  grid-template-columns: repeat(20,1fr);
+}
+.snake{
+  background-color: hsl(200,100%,50%);
+  border: .25vmin solid black;
+  background-image:url(../img/apple_00.png);
+}
+.snake1 {
+  /* height: 110%;
+  width: 110%; */
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.snake-utility{
+  border-radius: 70%;
+}
+.target{
+  background: rgb(14, 212, 90);
+  border: .25vmin solid black;
+  border-radius: 40%;
+  height: 75%;
+  width: 75%;
+}
+/* score */
+.score-display{
+  width: 10em;
+}
+.score {
+  color: white;
+  font-size: medium;
+}
+.log {
+    padding-top: 1em;
+    padding-left: 1em;
+     width: 2em;
+     height: 2em;
+}

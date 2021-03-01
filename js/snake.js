@@ -14,27 +14,16 @@ let newSegment = 0;
  	 }
  	 snakeBody[0].x += inputDirection.x;
  	 snakeBody[0].y += inputDirection.y;
+	 
+	
  }
 
- // export function draw(gameBoard) {
- // 	snakeBody.forEach(segment =>{
- // 		const snakeElement = document.createElement('div');
- // 		snakeElement.style.gridRowStart = segment.x;
- // 		snakeElement.style.gridColumnStart = segment.y;
- // 		snakeElement.classList.add('snake');
- // 		gameBoard.appendChild(snakeElement);
- // 	})
- // }
  export function draw(gameBoard) {
  	snakeBody.forEach( function(segment){
  		const snakeElement = document.createElement('div');
  		snakeElement.style.gridRowStart = segment.y;
  		snakeElement.style.gridColumnStart = segment.x;
  		snakeElement.classList.add('snake');
- 		let head = getSnakeHead();
- 		// if(head.x < 1 || head.y < 1 || head.x>grid_Size || head.y>grid_Size){
- 		// 	snakeElement.classList.add('snake-utility');
- 		// }
  		gameBoard.appendChild(snakeElement);
  	})
  }
