@@ -1,4 +1,4 @@
-import { update as updateSnake, draw as drawSnake ,snake_speed, 
+import { update as updateSnake, draw as drawSnake , 
 getSnakeHead,snakeIntersection,getSnakeBodyLength,onSnake } from './snake.js'
 
 import { update as updateFood, draw as drawFood } from './food.js'
@@ -9,25 +9,45 @@ let gameOver =false;
 const gameBoard = document.getElementById('gameBoard');
 const score = document.getElementById('score');
 const maxscore = document.getElementById('maxscore');
+const easy  = document.getElementById('easy');
+const medium = document.getElementById('medium');
+const hard = document.getElementById('hard');
+
+let snake_speed = 5;
+// function getlevel(){
+//     if(easy.checked){
+//       snake_speed = 5;
+//     }
+//     else if(medium.checked){
+//       snake_speed = 10;
+//     }
+//     else{
+//       snake_speed = 15;
+//     }
+//     easy.disabled = true;
+//     medium.disabled = true;
+//     hard.disabled = true;
+// }
+
  
 function main(currentTime) {
   while(t!=100 && gameOver){
         playAudioWall();
         t++;
+  }
+  //user lost ask to restart
+  if(gameOver){
+    if( confirm('You lost.Press ok to restart.')) {
+      location.reload();
     }
-    if(gameOver){
-    	if( confirm('You lost.Press ok to restart.')) {
-    		location.reload();
-    	}
-    	return;
-    }
+    return;
+  }
+  //update and draw for next round after interval 
 	const secondSinceLastRender = (currentTime-lastRenderTime)/1000;
 	window.requestAnimationFrame(main);
 	if(secondSinceLastRender < 1 / snake_speed) 
 		return ;
 	lastRenderTime = currentTime;
-	
-
 	update();
 	draw();
 }
