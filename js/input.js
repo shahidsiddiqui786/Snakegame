@@ -59,9 +59,9 @@ const gameBoard = document.getElementById('gameBoard');
     startY,
     distX,
     distY,
-    threshold = 150, //required min distance traveled to be considered swipe
-    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 300, // maximum time allowed to travel that distance
+    threshold = 10, //required min distance traveled to be considered swipe
+    restraint = 1000, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 3000, // maximum time allowed to travel that distance
     elapsedTime,
     startTime,
     handleswipe = callback || function(swipedir){}
