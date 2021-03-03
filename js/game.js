@@ -13,6 +13,7 @@ const easy  = document.getElementById('easy');
 const medium = document.getElementById('medium');
 const hard = document.getElementById('hard');
 
+
 let snake_speed = 5;
 // function getlevel(){
 //     if(easy.checked){
@@ -29,6 +30,13 @@ let snake_speed = 5;
 //     hard.disabled = true;
 // }
 
+
+function check(){
+  if(window.innerWidth < 500){
+      alert("oops! currently , it is not available in mobile");
+  }
+}
+check();
  
 function main(currentTime) {
   while(t!=100 && gameOver){
