@@ -8,7 +8,4 @@ you will lose at that instant.**
 
 ### Here are some screenshots
 
-<img src='https://github.com/shahidsiddiqui786/Snakegame/blob/master/anbc.png' width='700"'>
-
-
 <img src='https://github.com/shahidsiddiqui786/Snakegame/blob/master/abnd.png' width='700"'>
